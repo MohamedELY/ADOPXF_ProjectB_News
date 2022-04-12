@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:News.Views" 
+             x:Class="News.Views.MainPage">
+  <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <views:ArticleView />
+        <views:AboutPage />
+        <views:NewsPage Title="Business" />
+        <views:NewsPage Title="Entertainment" />
+        <views:NewsPage Title="General" />
+        <views:NewsPage Title="Health" />
+        <views:NewsPage Title="Science" />
+        <views:NewsPage Title="Sports" />
+        <views:NewsPage Title="Technology" />
+    </TabbedPage.Children>
+</TabbedPage>

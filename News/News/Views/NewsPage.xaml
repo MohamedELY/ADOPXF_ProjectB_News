@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="News.Views.NewsPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="50" />
+            <RowDefinition
+                Height="auto" />
+        </Grid.RowDefinitions>
+        
+        <ActivityIndicator Grid.Row="0"
+                           x:Name="AnimationLoader" />
+
+        <StackLayout Grid.Row="1"
+                     BackgroundColor="LightBlue">
+                  
+            <Label x:Name="Header" 
+                   FontSize="Title" 
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+            
+            <Button Text="Refresh" HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="RefreshButton"/>
+
+        </StackLayout>
+        
+        <ListView 
+            x:Name="newsList" 
+            ItemTapped="newsList_ItemTapped"
+            Grid.Row="2">
+            
+            <ListView.ItemTemplate>
+                
+                <DataTemplate>
+                    
+                    <ViewCell>
+                        
+                        <StackLayout Orientation="Horizontal">
+                            
+                            <Image
+                                Source="{Binding UrlToImage}"
+                                HeightRequest="64"
+                                WidthRequest="64"/>
+                            
+                            <StackLayout>
+
+                                <Label Text="{Binding DateTime, StringFormat='{0:dddd, dd MMMM yyyy hh:mm}'}"/>
+                                <Label Text="{Binding Title}" FontSize="Title" />
+                                
+                            </StackLayout>
+
+                        </StackLayout>
+                        
+                    </ViewCell>
+                    
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        
+    </Grid>
+    
+</ContentPage>
