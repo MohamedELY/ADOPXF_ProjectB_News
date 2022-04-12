@@ -13,6 +13,7 @@
                FontSize="16" Padding="30,0,30,0"/>
         <Label Text="Select a city and give it a try!" FontSize="16" Padding="30,0,30,0"/>
         <Label Text="Have fun!" FontSize="16" Padding="30,0,30,0"/>
+        <Label Text="Av: Mohamed EL Yahiaoui" FontSize="16" Padding="30,0,30,0"/>
         <Label FontSize="16" Padding="30,24,30,0">
             <Label.FormattedText>
                 <FormattedString>
